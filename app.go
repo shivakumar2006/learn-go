@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // func main() {
 // 	var array = [...]int {1, 2, 3, 4, 5, 69, 73};
 // 	var array2 = [...]int {3, 51, 69, 69, 69, 73};
@@ -141,8 +143,150 @@ package main
 // }
 
 //LOOPS......________..!!!!
+// func main() {
+// 	for i := 1; i <= 8; i++ {
+// 		fmt.Printf("value of i - %v \n", i);
+// 	}
+// } //FOR LOOP ARE THE ONLY LOOP WHICH ARE PRESENT IN GO.
+
+//IF-ELSE.....
+// func main() {
+// 	for i := 0; i<=10; i++ {
+// 		if i % 2 == 0 {
+// 			fmt.Printf("even number: %v \n", i);
+// 		} else {
+// 			fmt.Printf("odd number: %v \n", i);
+// 		}
+// 	}
+// }
+
+// SWITCH.........__!!
+// func main() {
+// 	switch 6 {
+// 	case 4:
+// 		fmt.Println("Shiva");
+// 	case 3:
+// 		fmt.Println("Kumar");
+// 	case 6:
+// 		fmt.Println("Shiva Kumar");
+// 	}
+// }
+
+// DEFER....._____!!!!
+// func main() {
+// 	// defer fmt.Println("i am");
+// 	// defer fmt.Println("Shiva");
+// 	// defer fmt.Println("Kumar");
+
+// 	//  fmt.Println("i am");
+// 	// defer fmt.Println("Shiva");
+// 	//  fmt.Println("Kumar");
+//
+
+// POINTERS.......
+// func main() {
+// 	x := 99;
+// 	var y *int = &x;
+
+// 	fmt.Println(x);
+// 	fmt.Println(y); // this give an address of a value where it can store
+// 	fmt.Println(*y); // this give a value of that specific variable.
+// }
+
+//FUNCTION.......!!!
+// func main() {
+// 	fmt.Println(show());
+// 	fmt.Println(number());
+// 	fullName();
+// 	summation(52, 48);
+// 	add(2, 5, 8, 3, 5);
+
+// 	mul, add := calculate(5, 4);
+// 	fmt.Println(mul);
+// 	fmt.Println(add);
+// }
+
+// func show() string {
+// 	return "Shiva";
+// }
+
+// func number() int {
+// 	return 45;
+// }
+
+// func fullName() {
+// 	fmt.Println("Shiva Kumar");
+// }
+
+// func summation(x int, y int) {
+// 	fmt.Println(x + y);
+// }
+
+// func add(values ... int) {
+// 	sum := 0;
+// 	for _, n := range values {
+// 		sum += n;
+// 	}
+// 	fmt.Println(sum);
+// }
+
+// //When we want to perform 2 or more operations in on efunction =>
+// func calculate(x int, y int) (int, int) {
+// 	return (x * y), (x + y);
+// }
+
+//Test method in Functions..... Also known as Anonymus Function...
+// type Employee struct {
+// 	EmpName string;
+// }
+
+// func main() {
+// 	emp := Employee{"Amit"};
+// 	emp.test();
+// }
+
+// func (emp Employee) test() {
+// 	fmt.Println(emp.EmpName);
+// }
+
+//Declaration and Call in same function....
+// func main() {
+// 	// f := func() {
+// 	// 	fmt.Println("Shiva Kumar");
+// 	// }
+
+// 	// f();
+
+// }
+
+//INTERFACE IN GO.......
 func main() {
-	for(int i=1; i<5; i++) {
-		fmt.Println("value of i: %v", i);
+	var object Vehicle = Bike {
+		Name: "Ninja ZX10R",
+		Color: "Green",
+		Price: 200000,
 	}
+
+	object.showDetails();
+	fmt.Println(object.showName())
+
+}
+
+type Vehicle interface {
+	showDetails();
+	showName() string;
+}
+type Bike struct {
+	Name, Color string;
+	Price float64;
+}
+
+func (bike Bike) showDetails() {
+	fmt.Println("Bike Name: ", bike.Name);
+	fmt.Println("Bike Color ", bike.Color);
+	fmt.Println("Bike Price ", bike.Price);
+}
+
+func (bike Bike) showName() string {
+	return bike.Name;
 }
