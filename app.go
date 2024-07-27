@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // func main() {
 // 	var array = [...]int {1, 2, 3, 4, 5, 69, 73};
 // 	var array2 = [...]int {3, 51, 69, 69, 69, 73};
@@ -260,33 +258,35 @@ import "fmt"
 // }
 
 //INTERFACE IN GO.......
-func main() {
-	var object Vehicle = Bike {
-		Name: "Ninja ZX10R",
-		Color: "Green",
-		Price: 200000,
-	}
+// func main() {
+// 	var object Vehicle = Bike {
+// 		Name: "Ninja ZX10R",
+// 		Color: "Green",
+// 		Price: 200000,
+// 	}
 
-	object.showDetails();
-	fmt.Println(object.showName())
+// 	object.showDetails();
+// 	fmt.Println(object.showName())
 
-}
+// }
 
-type Vehicle interface {
-	showDetails();
-	showName() string;
-}
-type Bike struct {
-	Name, Color string;
-	Price float64;
-}
+// type Vehicle interface {
+// 	showDetails();
+// 	showName() string;
+// }
+// type Bike struct {
+// 	Name, Color string;
+// 	Price float64;
+// }
 
-func (bike Bike) showDetails() {
-	fmt.Println("Bike Name: ", bike.Name);
-	fmt.Println("Bike Color ", bike.Color);
-	fmt.Println("Bike Price ", bike.Price);
-}
+// func (bike Bike) showDetails() {
+// 	fmt.Println("Bike Name: ", bike.Name);
+// 	fmt.Println("Bike Color ", bike.Color);
+// 	fmt.Println("Bike Price ", bike.Price);
+// }
 
-func (bike Bike) showName() string {
-	return bike.Name;
-}
+// func (bike Bike) showName() string {
+// 	return bike.Name;
+// }
+
+
